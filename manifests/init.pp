@@ -10,6 +10,10 @@
 class ppm_zsh_arch {
   if $::osfamily != 'windows' {
 
+    notify {'who_am_i':
+      message => "Hi! I'm ${::modulename} puppet module (:",
+    }
+
     $rootgroup = $::operatingsystem ? {
       'Solaris' => 'wheel',
       default   => 'root',
