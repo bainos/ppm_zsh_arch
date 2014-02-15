@@ -1,4 +1,4 @@
-# == Class: zsh_arch
+# == Class: ppm_zsh_arch
 #
 # This class install zsh package if needed and configure it
 # using archlinux iso image default configuration
@@ -7,7 +7,7 @@
 #
 # Jacopo Binosi <b4inoz@gmail.com>
 #
-class zsh_arch {
+class ppm_zsh_arch {
   if $::osfamily != 'windows' {
 
     $rootgroup = $::operatingsystem ? {
